@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS ansokningar_myh_2025 (
+CREATE TABLE IF NOT EXISTS ansokningar (
     utbildningsomrade           VARCHAR2(100 CHAR),
     sun5_inriktning             VARCHAR2(20 CHAR),
     sun5_inriktning_namn        VARCHAR2(200 CHAR),
