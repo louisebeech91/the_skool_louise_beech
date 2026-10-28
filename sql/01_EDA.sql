@@ -73,12 +73,29 @@ WHERE beslut = 'Beviljad'
 GROUP BY 
     utbildningsnamn,
     utbildningsanordnare  
-ORDER BY antal_beviljade;
+ORDER BY antal_beviljade DESC;
 
 
 -- g) Topp 5 län efter antal beviljade ansökningar
 
+SELECT lan,
+    COUNT(*) AS antal_beviljade
+FROM ansokningar
+WHERE beslut = 'Beviljad'
+GROUP BY lan
+ORDER BY antal_beviljade DESC
+FETCH FIRST 5 ROWS ONLY;
 
+-- 'flera kommuner' exkluderad
+
+SELECT lan,
+    COUNT(*) AS antal_beviljade
+FROM ansokningar
+WHERE beslut = 'Beviljad'
+    AND lan <> 'Flera kommuner'
+GROUP BY lan
+ORDER BY antal_beviljade DESC
+FETCH FIRST 5 ROWS ONLY;
 
 
 -- h) Andel distans och andel bundna utbildningar inom respektive utbildingsområde
