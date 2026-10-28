@@ -42,7 +42,7 @@ ORDER BY antal_beviljade DESC;
 -- d) Antal BEVILJADE ansökningar per utbildningsnamn inom Data/IT
 
 SELECT utbildningsnamn,
-    COUNT(utbildningsnamn) AS antal_beviljade
+    COUNT(*) AS antal_beviljade
 FROM ansokningar
 WHERE beslut = 'Beviljad'
     AND utbildningsomrade = 'Data/IT'
@@ -50,14 +50,35 @@ GROUP BY utbildningsnamn
 ORDER BY antal_beviljade DESC;
 
 
-
 -- e) Antal AVSLAGNA ansökningar per utbildningsnamn inom Data/IT
+
+SELECT utbildningsnamn,
+    COUNT(*) AS antal_avslagna
+FROM ansokningar
+WHERE beslut = 'Avslag'
+    AND utbildningsomrade = 'Data/IT'
+GROUP BY utbildningsnamn 
+ORDER BY antal_avslagna DESC;
 
 
 -- f) Antal BEVILJADE ansökningar per utbildningsanordnare administrativ enhet & utbildningsnamn, inom Data/IT
 
+SELECT 
+    utbildningsnamn,
+    utbildningsanordnare,
+    COUNT(*) AS antal_beviljade
+FROM ansokningar
+WHERE beslut = 'Beviljad'
+    AND utbildningsomrade = 'Data/IT'
+GROUP BY 
+    utbildningsnamn,
+    utbildningsanordnare  
+ORDER BY antal_beviljade;
+
 
 -- g) Topp 5 län efter antal beviljade ansökningar
+
+
 
 
 -- h) Andel distans och andel bundna utbildningar inom respektive utbildingsområde
