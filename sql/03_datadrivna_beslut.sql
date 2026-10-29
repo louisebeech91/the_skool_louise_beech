@@ -1,0 +1,5 @@
+SET PAGESIZE 100
+
+
+
+EXIT
