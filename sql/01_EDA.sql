@@ -29,7 +29,8 @@ WHERE beslut = 'Avslag'
 GROUP BY utbildningsomrade
 ORDER BY antal_avslagna DESC;
 
--- b,c)
+
+-- Kombinerad tabell b,c)
 
 SELECT utbildningsomrade,
     COUNT(CASE WHEN beslut = 'Beviljad' THEN 1 END) AS antal_beviljade,
@@ -100,9 +101,25 @@ FETCH FIRST 5 ROWS ONLY;
 
 -- h) Andel distans och andel bundna utbildningar inom respektive utbildingsområde
 
+SELECT utbildningsomrade,
+    COUNT(CASE WHEN studieform = 'Bunden' THEN 1 END) AS antal_bundna,
+    COUNT(CASE WHEN studieform = 'Distans' THEN 1 END) AS antal_distans
+FROM ansokningar
+GROUP BY utbildningsomrade
+ORDER BY utbildningsomrade;
+
 
 -- i) Antal utbildningar som innehåller ordet AI
 
+SELECT COUNT(*) AS antal_utb_inriktning_AI
+FROM ansokningar
+WHERE REGEXP_LIKE(utbildningsnamn, '(^|[^[:alpha:]])AI([^[:alpha:]]|$)');
 
+-- Vilka utbildningar som innehåller ordet AI
+SELECT utbildningsnamn, COUNT(*) AS antal_utb_inriktning_AI
+FROM ansokningar 
+WHERE REGEXP_LIKE(utbildningsnamn, '(^|[^[:alpha:]])AI([^[:alpha:]]|$)')
+GROUP BY utbildningsnamn
+ORDER BY antal_utb_inriktning_AI DESC;
 
 EXIT
