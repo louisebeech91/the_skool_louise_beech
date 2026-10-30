@@ -20,18 +20,27 @@ SQL analysis of the 2025 YH application round (MYH) for The Skool, exploring whi
 
 [sql/01_EDA.sql](sql/01_EDA.sql)
 
-a) Antal ansökningar per utbildningsområde, sorterat på flest ansökningar
-b) Antal BEVILJADE ansökningar per utbildningsområde
-c) Antal AVSLAGNA ansökningar per utbildningsområde
-d) Antal BEVILJADE ansökningar per utbildningsnamn inom Data/IT
-e) Antal AVSLAGNA ansökningar per utbildningsnamn inom Data/IT
-f) Antal BEVILJADE ansökningar per utbildningsanordnare administrativ enhet & utbildningsnamn, inom Data/IT
+a) Antal ansökningar per utbildningsområde, sorterat på flest ansökningar  
+b) Antal BEVILJADE ansökningar per utbildningsområde  
+c) Antal AVSLAGNA ansökningar per utbildningsområde  
+d) Antal BEVILJADE ansökningar per utbildningsnamn inom Data/IT  
+e) Antal AVSLAGNA ansökningar per utbildningsnamn inom Data/IT  
+f) Antal BEVILJADE ansökningar per utbildningsanordnare administrativ enhet & utbildningsnamn, inom Data/IT  
+g) Topp 5 län efter antal beviljade ansökningar  
+h) Andel distans och andel bundna utbildningar inom respektive utbildingsområde  
+i) Antal utbildningar som innehåller ordet AI  
+
+### Utdrag exempel
 g) Topp 5 län efter antal beviljade ansökningar
-h) Andel distans och andel bundna utbildningar inom respektive utbildingsområde
+![Topp 5 län](images/Lan.png)
+
+h) Andel distans och andel bundna utbildningar inom respektive utbildningsområde
+![Distans/bundna query](images/Utbildningsform_query.png)
+![Distans/bundna resultat](images/Utbildningsform_resultat.png)
+
 i) Antal utbildningar som innehåller ordet AI
-
-### Utdrag 
-
+![AI utbildningar query](images/AI_query.png)
+![AI utbildningar resultat](images/AI_resultat.png)
 
 ## Uppgift 2 – Intervju med domänexpert
 
@@ -46,8 +55,12 @@ Anteckningar --> [notes/stakeholder_interview.md](https://github.com/louisebeech
 Ett urval av frågor som utifrån 2025 års ansökningsresultat från MYH ska hjälpa The Skool att utforma ansökningar med större chans att beviljas. En träffsäker ansökan kan kan bespara dem betydande kostnader i form av arbetstid och förberedelser.    
 
 1. Vilka utbildningsområden har högst andel beviljade?
+![Utbildningsomr mest beviljade](images/Fråga_1_resultat.png)
+
 2. Skiljer det sig mellan privat och kommun, per område?
 3. Skiljer det sig mellan distans eller bunden, per område?
+![Studieform, per omr](images/Studieform.png)
+
 4. Hur skiljer det sig geografiskt över Sveriges län?
 
 __SLUTSATS:__ Skillnaderna mellan länen verkar inte bara bero på geografi utan också på vilka utbildningsområden ansökningarna gäller. Min rekommendation till The Skool för att maximera sina chanser till ett beviljande hade varit att i första hand överväga platsbundna utbildningar inom tex hälso- och sjukvård, teknik och tillverkning eller samhällsbyggnad. Data/IT verkar vara ett betydligt mer konkurrensutsatt område och eventuellt "mättat" utbildningsområde, vilket innebär att en ansökan behöver vara särskilt stark eller kraftigt nischad för att beviljas. Geografiskt kan det även vara värt att undersöka möjligheter utanför de största storstadsregionerna där beviljandegraden ofta är högre.
