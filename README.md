@@ -41,7 +41,9 @@ h) Andel distans och andel bundna utbildningar inom respektive utbildningsområd
 i) Antal utbildningar som innehåller ordet AI
 ![AI utbildningar query](images/AI_query.png)
 ![AI utbildningar resultat](images/AI_resultat.png)
-Valde att använda `REGEXP_LIKE` för att det blir smidigare kod, möjlighet att baka in flera `LIKE` i en rad.  
+
+Valde att använda `REGEXP_LIKE` för att det blir smidigare kod, möjlighet att baka in flera `LIKE` i en rad med `|` som man kan läsa som "eller".  
+![Explaining REGEXP_LIKE](images/REGEXP.png)
 
 ## Uppgift 2 – Intervju med domänexpert
 
