@@ -41,6 +41,7 @@ h) Andel distans och andel bundna utbildningar inom respektive utbildningsområd
 i) Antal utbildningar som innehåller ordet AI
 ![AI utbildningar query](images/AI_query.png)
 ![AI utbildningar resultat](images/AI_resultat.png)
+Valde att använda `REGEXP_LIKE` för att det blir smidigare kod, möjlighet att baka in flera `LIKE` i en rad.  
 
 ## Uppgift 2 – Intervju med domänexpert
 
@@ -68,8 +69,8 @@ __SLUTSATS:__ Skillnaderna mellan länen verkar inte bara bero på geografi utan
 ## Uppgift 4 – Datamodell (bonus)
 --
 
-## Video och presentation
-Länk till presentation.
+## Presentation
+Presentation --> [Slides till ppt](slides/The_Skool_PPT.pdf)
 
 ## Kom igång
 
